@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css"> <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- General CSS -->
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="Company Logo" class="navbar-logo"> <!-- Your logo -->
+        <ul class="navbar-links">
+            <li><a href="index.html">Login</a></li>
+            <li><a href="login.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="login(); return false;"> <!-- Calls JavaScript on submit -->
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+            <button type="submit">Login</button> <!-- Submit to trigger login -->
+        </form>
+    </div>
+
+    <script>
+    function login() {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // Basic validation - you can add more complex logic here
+        if (username === "" || password === "") {
+            alert("Username and password are required");
+            return;
+        }
+
+        // Redirect to the chatbot page (index.html)
+        window.location.href = "index.html";
+    }
+    </script>
+</body>
+</html>

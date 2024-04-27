@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Page</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css"> <!-- Navbar CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- General CSS -->
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo.png" alt="Company Logo" class="navbar-logo"> <!-- Your logo -->
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="chat-container">
+        <div class="chat-window" id="chatWindow">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="input-container">
+            <form id="chatForm" onsubmit="sendMessage(); return false;">
+                <input type="text" id="userInput" placeholder="Type a message..." />
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script> <!-- JavaScript for chatbot -->
+</body>
+</html>
